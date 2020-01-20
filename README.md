@@ -26,7 +26,7 @@
 ![Before Login](/screenshot1.jpg?raw=true "Home Page before Log in")
 ![Sign Up Form](/screenshot2.png?raw=true "Sign Up Form")
 ![Play Page](/screenshot4.png?raw=true "Play page")
-![Logged in](/screenshot3.jpg?raw=true "Home Page after login")
+![Logged in](/screenshot32.jpg?raw=true "Home Page after login")
 
 
 ## Technologies
