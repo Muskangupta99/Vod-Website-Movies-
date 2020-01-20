@@ -24,7 +24,7 @@
 
 ## Screenshots
 https://github.com/Muskangupta99/Vod-Website-Movies-/screenshot1.jpg?raw=true
-![Alt text](/relative/path/to/screenshot1.jpg?raw=true "Optional Title")
+![Alt text](/screenshot1.jpg?raw=true "Optional Title")
 
 ## Technologies
 * Html
