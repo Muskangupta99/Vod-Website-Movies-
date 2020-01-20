@@ -23,7 +23,8 @@
    Signup and Login features
 
 ## Screenshots
-![Alt text](screenshot1.jpg?raw=true "Home Page when logged out")
+https://github.com/Muskangupta99/Vod-Website-Movies-/screenshot1.jpg?raw=true
+
 
 ## Technologies
 * Html
