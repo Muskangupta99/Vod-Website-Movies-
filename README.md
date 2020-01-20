@@ -23,6 +23,7 @@
    Signup and Login features
 
 ## Screenshots
+![Alt text](screenshot1.jpg?raw=true "Home Page when logged out")
 
 ## Technologies
 * Html
