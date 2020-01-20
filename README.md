@@ -1,4 +1,4 @@
-#VOD [Movie] Website
+# VOD [Movie] Website
 
 
 ## Table of contents
@@ -38,7 +38,7 @@
 * XAMPP for local host
 
 ## Setup
-----------------------------this website runs on local host, installation of XAMPP required--------------------------
+#### this website runs on local host, installation of XAMPP required
 
 * installation of Xampp required, the files should be places in C drive
 * After installing Xampp in C drive,Click on Xampp -> htdocs and create a folder moviewebsite
@@ -47,14 +47,14 @@
 * pictures : to store movie pictures
 * link :store the movies in this file
 * Copy the project files in moviewebsite 
-------------------------------------------------DATABASE SCHEMA------------------------------------------------
+#### DATABASE SCHEMA
 * In the Xampp panel,start Apache and MySql
 * Click on MySql Admin for php MyAdmin
 * Create a database named onlinemovies (as that is the name used for connection,or change db name in connection.php
  the following Schema is needed to be made
 
-SQL Commands to create Schema
--Creaing Movie Table:
+##### SQL Commands to create Schema
+###### Creaing Movie Table:
  CREATE TABLE mvoies (
     id int(11), PRIMARY KEY,AUTO_INCREMENT,
     name varchar(200),
@@ -63,7 +63,7 @@ SQL Commands to create Schema
     picture varchar(500),
 );
 
--Creating Users table:
+###### Creating Users table:
  CREATE TABLE users (
     id int(11), PRIMARY KEY,AUTO_INCREMENT,
     username varchar(20),
@@ -72,7 +72,7 @@ SQL Commands to create Schema
     activationKey char(32),
 );
   
--Creating Remember me table:
+###### Creating Remember me table:
 CREATE TABLE rememberme (
     id int(11), PRIMARY KEY,AUTO_INCREMENT,
     authentificator1 char(20),
@@ -81,7 +81,7 @@ CREATE TABLE rememberme (
     expiration datetime,
 );
 
--Creating forgot password table:
+###### Creating forgot password table:
 CREATE TABLE forgotpassword (
     id int(11), PRIMARY KEY,AUTO_INCREMENT,
     user_d int(11),
@@ -90,11 +90,11 @@ CREATE TABLE forgotpassword (
     status varchar(7),
 );
 
-##Status
+## Status
 Project is:finished
 
-##Credits
+## Credits
 Thank You Issam(the founder and director of Development Island based in Bedford, United Kindgom and creater of the Complete Web Development Course on Udemy) for personally helping me with all the problems I encountered during coding and helping me with the authentication process.
 
-##Contact
+## Contact
 Created by @Muskangupta99 - feel free to contact me!
