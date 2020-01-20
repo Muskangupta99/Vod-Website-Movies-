@@ -23,8 +23,11 @@
    Signup and Login features
 
 ## Screenshots
-https://github.com/Muskangupta99/Vod-Website-Movies-/screenshot1.jpg?raw=true
-![Alt text](/screenshot1.jpg?raw=true "Optional Title")
+![Before Login](/screenshot1.jpg?raw=true "Home Page before Log in")
+![Sign Up Form](/screenshot2.jpg?raw=true "Sign Up Form")
+![Play Page](/screenshot4.jpg?raw=true "Play page")
+![Logged in](/screenshot3.jpg?raw=true "Home Page after login")
+
 
 ## Technologies
 * Html
