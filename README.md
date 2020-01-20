@@ -11,9 +11,9 @@
 * [Inspiration](#inspiration)
 
 ## General info
-*VOD Website to view Movies Online with secure signup and login features, includes web scraping
+* VOD Website to view Movies Online with secure signup and login features, includes web scraping
 
-##Features
+## Features
 * Movies can be watched only after sign up
 * The Website includes:
 * 1-> index.php [the main home page that a non logged in user is shown,or a logged in user is shown if he/she has logged out]
