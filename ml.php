@@ -1,14 +1,63 @@
 <?php
 include("connection.php");
 session_start();
-if(!isset($_SESSION['userid'])){
-    header("location: index.php");
-}
+
 ?>
 
 <!doctype html>
 <html lang="en">
   <head>
+  <style>
+	.searchdiv{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+.genre{
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
+#slider {
+    position:absolute;
+    left:0;
+    height:400px;
+
+    border-style:solid;
+    border-width:5px;
+}
+#slider img {
+    width:100%;
+}
+
+#content {
+    position:absolute;
+}
+
+#content #text {
+    position:relative;
+    width:950px;
+    height:215px;
+    color:white;
+}
+.carousel-content {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  z-index: 20;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+.center-div
+{
+       margin: auto;
+  width: 60%;
+  background-color:#DCDCDC;
+  padding: 10px;
+  background: rgba(200, 54, 54, 0.5);
+</style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -41,7 +90,7 @@ if(!isset($_SESSION['userid'])){
       <li class="nav-item">
         <a class="nav-link" href="index.php?logout=1">Log out <span class="sr-only">(current)</span></a>
       </li>
-
+<li>
 <select class="custom-select" name="genresearch" id="genresearch">
   <option value="Genre" disabled selected>Genre</option>
   <option value="All" class="genre" >All</option>
@@ -51,7 +100,15 @@ if(!isset($_SESSION['userid'])){
   <option value="Thriller" class="genre">Thriller</option>
   <option value="Romance" class="genre">Romance</option>
   </select>
+</li>
+<li>
 
+   <form class="form-inline" method="post" id="searchform">
+    <input class="form-control mr-sm-2" type="text" name="valuesearch" id="empty" placeholder="Search Movie">
+    <button class="btn btn btn-primary my-2 my-sm-0" type="submit" name="moviesearch">Search</button></p></form>
+	</li>
+      
+    </ul>
 </div>
 
  
@@ -62,17 +119,70 @@ if(!isset($_SESSION['userid'])){
 </nav>
 
 <div class="jumbotron">
-  <h1 class="display-3">Hit the PlAY button to watch!</h1>
+  
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="image1.jpg" alt="First slide">
+	  <div class="carousel-content">
+	  <div class="center-div">
+        <p><h1 class="display-3"><h1 class="display-3">Hit the PLAY button!</h1>
   <p class="lead">Read the Movie Info on your play screen</p>
   <hr class="my-2">
-  <p>Type a movie in the search box</p>
+  <p>The Play Button appears when you login!</p>
   <p class="lead">
+  
     
-  <form class="form-inline" method="post" id="searchform">
-    <input class="form-control mr-sm-2" type="text" name="valuesearch" id="empty" placeholder="Search Movie">
-    <button class="btn btn btn-primary my-2 my-sm-0" type="submit" name="moviesearch">Search</button>
-	
-
+  
+      </div>
+	  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="image1.jpg" alt="Second slide">
+	   <div class="carousel-content">
+	  <div class="center-div">
+        <p><h1 class="display-3"><h1 class="display-3">Hit the PLAY button!</h1>
+  <p class="lead">Read the Movie Info on your play screen</p>
+  <hr class="my-2">
+  <p>The Play Button appears when you login!</p>
+  <p class="lead">
+  
+    
+  
+      </div>
+    </div>
+	</div>
+    
+      <div class="carousel-item">
+      <img class="d-block w-100" src="image1.jpg" alt="Second slide">
+	   <div class="carousel-content">
+	  <div class="center-div">
+        <p><h1 class="display-3"><h1 class="display-3">Hit the PLAY button!</h1>
+  <p class="lead">Read the Movie Info on your play screen</p>
+  <hr class="my-2">
+  <p>The Play Button appears when you login!</p>
+  <p class="lead">
+  
+    
+  
+      </div>
+    </div>
+	</div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
 
 
 	
