@@ -1,6 +1,13 @@
 <?php
 include("connection.php");
-session_start();
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+if(!isset($_SESSION['userid'])){
+    header("location: index.php");
+}
 
 ?>
 
@@ -70,7 +77,12 @@ session_start();
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Movies</a>
- <a class="navbar-brand" href="Profile.php">Profile</a>
+   <?php if($_SESSION['userid']== $_SESSION['username'])
+        echo '<b class="navbar-brand">Logged in using Google Account</b>';
+	    else
+			echo '<a class="navbar-brand" href="Profile.php">Profile</a>';
+		?>
+ 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -85,11 +97,16 @@ session_start();
     <ul class="nav navbar-nav navbar-right ">
 	</li>
 	   <li class="nav-item">
-        <b class="navbar-brand">Hi <?php echo $_SESSION['username'] ; ?><span class="sr-only"></b>
+        <b class="navbar-brand">Hi <?php if(isset($_SESSION['userid'])) echo $_SESSION['username'] ;  ?><span class="sr-only"></b>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.php?logout=1">Log out <span class="sr-only">(current)</span></a>
+	    <?php if($_SESSION['userid']== $_SESSION['username'])
+        echo '<b class="navbar-brand"><a href="logout2.php">Log Out <span class="sr-only">(current)</span class="sr-only"></a></b>';
+	    else
+			echo '<b class="navbar-brand"><a href="index.php?logout=1">Log out <span class="sr-only">(current)</span class="sr-only"></a></b>';
+		?>
       </li>
+	  
 <li>
 <select class="custom-select" name="genresearch" id="genresearch">
   <option value="Genre" disabled selected>Genre</option>
